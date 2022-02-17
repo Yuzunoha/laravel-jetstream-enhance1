@@ -13,9 +13,12 @@ class CreateStudentProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('student_profile', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('student_profiles', function (Blueprint $table) {
+            $table->integer('user_id');
+            $table->primary('user_id');
+            $table->string('student_profile_memo');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
@@ -26,6 +29,6 @@ class CreateStudentProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('student_profile');
+        Schema::dropIfExists('student_profiles');
     }
 }

@@ -13,7 +13,7 @@ class CreateManagerProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('manager_profile', function (Blueprint $table) {
+        Schema::create('manager_profiles', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateManagerProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('manager_profile');
+        Schema::dropIfExists('manager_profiles');
     }
 }
