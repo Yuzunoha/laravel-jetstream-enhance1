@@ -23,4 +23,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', 'ProfileController@index');
+    Route::get('/studentprofile/update', 'StudentProfileController@update');
 });
