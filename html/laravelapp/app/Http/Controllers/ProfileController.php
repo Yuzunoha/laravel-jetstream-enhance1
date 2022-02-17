@@ -9,6 +9,7 @@ class ProfileController extends BaseController
 {
     public function index()
     {
-        return ['hello', Auth::id()];
+        echo '<pre>';
+        print_r(Auth::user()->toArray());
     }
 }
