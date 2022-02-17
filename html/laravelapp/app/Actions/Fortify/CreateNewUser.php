@@ -35,10 +35,10 @@ class CreateNewUser implements CreatesNewUsers
         ]);
         $user_id = $user->id;
         $memo = 'user_id:' . $user_id . ' サンの情報です。';
-        $sp = StudentProfile::create([
+        StudentProfile::create([
             'user_id' => $user_id,
             'student_profile_memo' => $memo,
         ]);
-        return $user;
+        return User::with(['studentProfile',])->find($user_id);
     }
 }
