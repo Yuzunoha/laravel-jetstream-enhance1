@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentProfile extends Model
 {
+    protected $fillable = [
+        'user_id',
+        'student_profile_memo',
+    ];
     use HasFactory;
 }
